@@ -6,7 +6,12 @@ const App = () => {
 
   const apptheme = darkMode ? "app dark" : "app";
   return (
-    <div className={apptheme}>App</div>
+    <div className={apptheme}>
+      <h1>Navbar</h1>
+      <div className="wrapper">
+        Routes
+      </div>
+    </div>
   )
 }
 
