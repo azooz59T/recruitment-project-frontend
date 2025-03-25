@@ -3,8 +3,9 @@ import './companies.scss'
 import httpModule from '../../helpers/http.modules'
 import { ICompany } from "../../types/global.typing";
 import {useNavigate} from "react-router-dom";
-import { Button } from '@mui/material';
+import { Button, CircularProgress } from '@mui/material';
 import { Add } from "@mui/icons-material";
+import CompanyGrid from "../../components/companies/CompanyGrid.component";
 
 
 const companies = () => {
@@ -36,6 +37,15 @@ const companies = () => {
           <Add />
         </Button>
       </div>
+      {
+        loading ? (
+          <CircularProgress size ={100} />)
+          : companies.length === 0 ? (
+            <h1> No Company</h1>
+          ) : (
+            <CompanyGrid data = {companies} />
+          )
+      }
     </div>
   )
 }
