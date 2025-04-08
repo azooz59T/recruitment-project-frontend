@@ -1,7 +1,6 @@
 import { Box } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
 import { GridColDef } from "@mui/x-data-grid";
-import moment from "moment";
 import { ICandidate } from "../../types/global.typing";
 import { baseurl } from "../../constants/url.constants";
 import { PictureAsPdf } from "@mui/icons-material";
