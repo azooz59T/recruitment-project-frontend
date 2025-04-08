@@ -3,3 +3,10 @@
         color: var(--text-color);
     }
 }
+
+.app.dark {
+    .MuiDataGrid-topContainer {
+        color: black;
+    }
+}
+
