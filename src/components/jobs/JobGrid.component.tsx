@@ -1,3 +1,4 @@
+import "./jobs-grid.scss";
 import { Box } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
 import { GridColDef } from "@mui/x-data-grid";
