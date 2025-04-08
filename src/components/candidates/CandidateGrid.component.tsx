@@ -3,6 +3,8 @@ import { DataGrid } from "@mui/x-data-grid";
 import { GridColDef } from "@mui/x-data-grid";
 import moment from "moment";
 import { ICandidate } from "../../types/global.typing";
+import { baseurl } from "../../constants/url.constants";
+import { PictureAsPdf } from "@mui/icons-material";
 
 const column: GridColDef [] = [
   {field: "firstName", headerName: "FirstName", width: 100},
@@ -11,6 +13,12 @@ const column: GridColDef [] = [
   {field: "phone", headerName: "Phone", width: 150},
   {field: "coverLetter", headerName: "Coverletter", width: 350},
   {field: "jobId", headerName: "JobId", width: 150},
+  {field: "resumeUrl",
+   headerName: "Download",
+   width: 150,
+   renderCell: (params) => (
+    <a href={`${baseurl}/Candidate/download/${params.row.resumeUrl}` } download><PictureAsPdf /></a>
+   ) },
 ];
 
 interface ICandidateGridProps {
